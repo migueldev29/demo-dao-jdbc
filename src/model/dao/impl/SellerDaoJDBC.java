@@ -115,9 +115,11 @@ public class SellerDaoJDBC implements SellerDao{
 			if (rows == 0) {
 				throw new DbException("Seller id doens't exist.");
 			}
-		}catch (SQLException e) {
+		}
+		catch (SQLException e) {
 			throw new DbException(e.getMessage());
-		}finally {
+		}
+		finally {
 			DB.closeStatement(st);
 		}
 		
